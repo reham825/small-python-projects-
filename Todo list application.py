@@ -1,9 +1,12 @@
-tasks = []
+tasks = ["study english", "walking"]
 
 
 def View_Tasks():
-    for i in range(len(tasks)):
-        print(f'{i + 1}.{tasks[i]}')
+    if not tasks:
+        print("no tasks to display")
+    else:
+        for i, task in enumerate(tasks, 1):
+            print(f'{i}-{task}')
 
 
 def Add_a_Task():
